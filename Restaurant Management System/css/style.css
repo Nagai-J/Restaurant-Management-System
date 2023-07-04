@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  z-index: 1000;
+}
+
+#header .fa-hamburger {
+  font-size: 4rem;
+  z-index: 10000;
+  cursor: pointer;
+  color: yellow;
+  display: none;
+}
+
+#header .logo img {
+  height: 5rem;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+#header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#header nav ul li {
+  margin-right: 4rem;
+}
+
+#header nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#header nav ul li a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.header-active {
+  background: #333;
+  height: 6rem;
+  box-shadow: 0.2rem 0 0.5rem #000;
+}
+
+.header-active nav ul {
+  margin: 0;
+}
+
+#home {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  min-height: 100vh;
+  position: relative;
+}
+
+#home .content h1 {
+  font-size: 5rem;
+  font-family: "lemonada", sans-serif;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+  color: yellow;
+}
+
+#home .content h2 {
+  font-size: 3.5rem;
+  font-family: "lemonada", sans-serif;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+  color: #fff;
+  margin: 1rem 0;
+  margin-right: 10%;
+}
+
+#home .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+  margin-left: 16.5%;
+}
+
+#home .content button {
+  height: 4rem;
+  width: 14rem;
+  background: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#home .content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: yellow;
+  height: 100%;
+  width: 0%;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+#home .content button:hover:before {
+  width: 100%;
+}
+
+#home .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+#home .video-container .vid {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+#home .video-container .vid1 {
+  display: block;
+}
+
+#home .controls {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%0);
+  display: flex;
+}
+
+#home .controls .dots {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  background: yellow;
+  margin: 0 1rem;
+}
+
+#home .controls .dots:hover {
+  background: #fff;
+}
+
+#special {
+  background: #000;
+  min-height: 100vh;
+}
+
+#special .heading h1 {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#special .heading span {
+  color: yellow;
+}
+
+#special .heading h1 p {
+  color: #ccc;
+  font-size: 2rem;
+}
+
+#special .card-container {
+  width: 95%;
+  margin: 7rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#special .card-container .card {
+  height: 40rem;
+  width: 30rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+#special .card-container .card img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#special .card-container .card p {
+  font-size: 1.4rem;
+  margin: 2rem;
+}
+#special .card-container .card button {
+  height: 3.5rem;
+  width: 14rem;
+  background: #333;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#special .card-container .card button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: yellow;
+  height: 100%;
+  width: 0%;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+#special .card-container .card button:hover:before {
+  width: 100%;
+}
+#special .card-container .card button:hover {
+  color: #333;
+}
+
+#special .card-container .card:hover {
+  transform: scale(0.9);
+}
+
+#about .heading h1 {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+#about .heading span {
+  color: yellow;
+}
+
+#about .heading h1 p {
+  color: #ccc;
+  font-size: 2rem;
+}
+
+#about .content {
+  margin: 5rem auto;
+}
+
+#about .content p {
+  font-size: 2rem;
+}
+
+#about .content button {
+  height: 4rem;
+  width: 14rem;
+  background: #333;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#about .content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: yellow;
+  height: 100%;
+  width: 0%;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+#about .content button:hover:before {
+  width: 100%;
+}
+#about .content button:hover {
+  color: #333;
+}
+
+#about .image img {
+  width: 30vw;
+}
+
+.fa-times {
+  transform: skew(-180deg) rotate(-180deg);
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  #header .fa-hamburger {
+    display: block;
+  }
+
+  #header nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 35rem;
+    background: black;
+  }
+
+  #header nav ul {
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #header nav ul li {
+    margin: 3rem 0;
+  }
+
+  #header nav ul li a {
+    font-size: 3.5rem;
+    border-radius: 10rem;
+  }
+
+  #header nav ul li a:hover {
+    padding: 5rem 7.5rem;
+    color: #333;
+    background: yellow;
+  }
+
+  #header .nav-toggle {
+    left: 0%;
+  }
+  #about .image {
+    text-align: center;
+  }
+  #about .image img {
+    width: 70vw;
+  }
+}
